@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if(document.location.hash === '#unauthorized') {
+     document.write('<div class=â€œunauthorizedâ€>Invalid Username or Password</div>');
+        } else if(document.location.hash === '#error') {
+     document.write('<div class=â€œerrorâ€>An error has occured</div>');
+        }
+      </script>
+     
+</head>
+<body>
+    <button onclick="document.getElementById('id01').style.display='block'"
+    style="width: auto;">Login</button>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="POST">
+        </form>
+    </div>
+    <div class="container">
+        <!-- Username -->
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <!-- Password -->
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember">Remember Me
+        </label>
+</body>
+</html>
